@@ -11,12 +11,21 @@ var numberArray = ["1", "2", "3", "4", "5", "6," "7", "8", "9", "0"];
 
 
 
-
 // prompt - how many characters
+var passLengthAns = prompt ("How many characters do you want your password to be?");
 // prompt - do you want special characters t/f
+var specialCharAns = confirm ("Do you want special characters?");
 // prompt - do you want numbers t/f
+var numberAns = confirm ("Do you want numbers?");
 // prompt - do you want lowercase t/f
+var lowerCaseAns = confirm ("Do you want lowercase characters?");
 // prompt - do you want uppercase t/f
+var upperCaseAns = confirm ("Do you want uppercase characters?");
+
+
+
+
+
 
 // then return password into form
 
