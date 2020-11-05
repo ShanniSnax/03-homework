@@ -32,18 +32,17 @@ function generatePassword() {
   }
 
 
-
 // global variables - arrays
 // main array
 var mainArray = [];
 // spcial characters
-var specialCharArray = [",""<"".""/"">""?""=""+""_""-"")""(""*""&""^""%""$""#""@""!""`""~"";"":"]
+var specialCharArray = [",", "<", ".", "/", ">", "?", "=", "+", "_", "-", ")", "(", "*", "&", "^", "%", "$", "#", "@", "!", "`", "~", ";", ":"];
 // lowercase characters
 var lowerCaseArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 // uppercase characters
 var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 // number characters 
-var numberArray = ["1", "2", "3", "4", "5", "6," "7", "8", "9", "0"];
+var numberArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
 
 // variables - prompts
@@ -55,6 +54,35 @@ var numberAns = confirm ("Do you want numbers?");
 var lowerCaseAns = confirm ("Do you want lowercase characters?");
 // prompt - do you want uppercase t/f
 var upperCaseAns = confirm ("Do you want uppercase characters?");
+// password array
+var passwordArray = [];
 
 
+ // adding prompt values into the main array
+ if (numberAns) {
+  mainArray.push(...numberArray)
+  var randomNumber2 = Math.floor(Math.random() * numberArray.length);
+  passwordArray.push(numberArray[randomNumber2])
+  passLengthAns--
+}
+if (specialCharAns) {
+  mainArray.push(...specialCharArray)
+  var randomNumber3 = Math.floor(Math.random() * specialCharArray.length);
+  passwordArray.push(specialCharArray[randomNumber3])
+  passLengthAns--
+}
+if (lowerCaseAns) {
+  mainArray.push(...lowerCaseArray)
+  var randomNumber4 = Math.floor(Math.random() * lowerCaseArray.length);
+  passwordArray.push(lowerCaseArray[randomNumber4])
+  passLengthAns--
+}
+if (upperCaseAns) {
+  mainArray.push(...upperCaseArray)
+  var randomNumber5 = Math.floor(Math.random() * upperCaseArray.length);
+  passwordArray.push(upperCaseArray[randomNumber5])
+  passLengthAns--
+}
 
+
+}
