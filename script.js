@@ -23,7 +23,6 @@ function generatePassword() {
   // User clicks generatePassword button
   var passLengthAns = prompt ("How many characters do you want your password to be?");
   passLengthAns = Math.floor(passLengthAns);
-  console.log(passLengthAns);
 
   // User picks less than 8 or more than 128
   if (passLengthAns < 8 || passLengthAns > 128) {
@@ -84,5 +83,12 @@ if (upperCaseAns) {
   passLengthAns--
 }
 
+// looping through array
+for (var i = 0; i < passLengthAns; i++) {
 
+  var randomNumber = Math.floor(Math.random() * mainArray.length);
+  passwordArray.push(mainArray[randomNumber])
+
+}
+return passwordArray.join("");
 }
